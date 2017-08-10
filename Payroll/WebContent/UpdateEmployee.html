@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset = "UTF-8"> 
+<link rel = "stylesheet" type = "text/css" href = "main.css">
+<link rel = "stylesheet" type = "text/css" href = "sidebar.css">
+<title>Update Employee Information</title>
+<style>
+table { border-collapse: collapse; width: 50%; } th, td { text-align: left; padding: 8px; } tr:nth-child(even){background-color: #f2f2f2}
+tr:hover {background-color: #e2f4ff;}
+</style>
+</head>
+
+<body>
+<ul>
+
+<li><a  href="PersonalInfoOutput">View Personal Information</a></li>
+<li><a  href="ViewEmployeeExpenseClaim">View Expense Claims</a></li>
+<li><a  href="PayslipAdmin">View Payslips</a></li>
+<li><a  href="changePassAdmin.html" >Change Password</a></li>
+<li><a  href="manageEmployee.html"class=active>Maintain Employee Information</a></li>
+<li><a  href="TaxInfo.html">Maintain Tax Information</a></li>
+<li><a  href="Payrollitems.html">Maintain Payroll Items</a></li>
+<li><a  href="TimeSheet.html">Maintain Timesheet</a></li>
+<li><a  href="EmployeeExpense.html">Maintain Expenses</a></li>
+<li><a  href="PayrollRun">Run Payroll</a></li>
+<li><a  href="GenerateReports">Generate Reports</a></li>
+
+</ul>
+<form align="right" name="form1" method="post" action="index.html">
+  <label>
+  <input name="submit2" type="submit" id="submit2" value="Logout">
+  </label>
+</form>
+<div style=margin-left:25%;padding:1px;>
+</div>
+
+<div id="container">
+<h1>Update Employee Details</h1>
+<h3>(All update fields are optional, except for New Admin Status)</h3>
+<form action ="UpdateEmployeeAccount" method = "post"> 
+	
+	<table border ="1">	
+	
+	<tr>
+	<td>Employee ID (of employee to be updated)</td>
+	<td><input type = "text" name = "update_id"  pattern="[0-9]{4}" title="4 digit number: e.g. 1234" maxlength="4" required></td>
+	</tr>
+	
+	<tr>
+	<td>New Admin Status</td>
+	<td>
+	<input type = "radio" name = "NewAdminStatus" value ="1" required>Yes
+	<input type = "radio" name = "NewAdminStatus" value = "0" required>No
+	</td>
+	</tr>
+	
+	<tr>
+	<td>New Residential Address</td>
+	<td><input type = "text" name = "newAddress">
+	</tr>
+	
+	<tr>
+	<td>Revised Hourly Pay Rate ($)</td>
+	<td><input type = "number" name = "NewPay" min="0" step="0.01">
+	</tr>
+	
+	<tr>
+	<td>New Role:</td>
+	<td><input type = "text" name = "NewRole" >
+	</tr>
+	
+	<tr>
+	<td>New BSB Number</td>
+	<td><input type = "text" name = "NewBSB"  pattern="[0-9]{6}" title="6-digit BSB number e.g. 123456" maxlength="6" >
+	</tr>
+	
+	<tr>
+	<td>New Bank (if employee has changed bank)</td>
+	<td><input type = "text" name = "NewBank">
+	</tr>
+	
+	<tr>
+	<td>New Bank Account Number</td>
+	<td><input type = "text" name = "NewBAN"  pattern="[0-9]{12}" title="Please enter a valid Bank Account Number" maxlength="12">
+	</tr>
+	
+	<tr>
+	<td>New Superannuation Company</td>
+	<td><input type = "text" name = "NewSAC"> 
+	</tr>
+	
+	<tr>
+	<td>New Superannuation Number</td>
+	<td><input type = "text" name = "NewSAN"> 
+	</tr>
+	
+	</table>
+	<br>
+	<br>
+	<input type = "submit" value = "Update Employee Details">
+	</form>.
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset = "UTF-8"> 
+<link rel = "stylesheet" type = "text/css" href = "main.css">
+<link rel = "stylesheet" type = "text/css" href = "sidebar.css">
+<title>Edit Tax Information</title>
+
+</head>
+
+<body>
+
+<ul>
+
+<li><a  href="PersonalInfoOutput">View Personal Information</a></li>
+<li><a  href="ViewEmployeeExpenseClaim">View Expense Claims</a></li>
+<li><a  href="PayslipAdmin">View Payslips</a></li>
+<li><a  href="changePassAdmin.html" >Change Password</a></li>
+<li><a  href="manageEmployee.html">Maintain Employee Information</a></li>
+<li><a  class = "active" href="TaxInfo.html">Maintain Tax Information</a></li>
+<li><a  href="Payrollitems.html">Maintain Payroll Items</a></li>
+<li><a  href="TimeSheet.html">Maintain Timesheet</a></li>
+<li><a  href="EmployeeExpense.html">Maintain Expenses</a></li>
+<li><a  href="PayrollRun">Run Payroll</a></li>
+<li><a  href="GenerateReports">Generate Reports</a></li>
+
+</ul>
+<form align="right" name="form1" method="post" action="index.html">
+  <label>
+  <input name="submit2" type="submit" id="submit2" value="Logout">
+  </label>
+</form>
+<div style=margin-left:25%;padding:1px;>
+</div>
+
+
+<div id="container">
+<h1>Add Tax Bracket</h1>
+<form action ="AddTax" method = "post"> 
+
+
+	<table border ="1">	
+	
+	<tr>
+	<td>Tax Bracket</td>
+	<td><input type = "number" name = "bracket" min="0" step="1"  required></td>
+	</tr>
+	
+	<tr>
+	<td>From Salary($)</td>
+	<td><input type = "number" name = "FromSalary" min="0" step="0.01"  required></td>
+	</tr>
+	
+	<tr>
+	<td>To Salary($)</td>
+	<td><input type = "number" name = "ToSalary" min="0" step="0.01"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Tax Rate(%)</td>
+	<td><input type = "number" name = "rate" min="0" step="0.01"  required></td>
+	</tr>
+	
+	</table>
+	<br>
+	<br>
+	<input type = "submit" value = "Add Tax Bracket">
+	</form>
+	
+	<h1>Clear Tax Table </h1>
+	<h3> Caution, do not perform this action unless government has altered tax information.</h3>
+	<h3> You will then have to manually enter new tax table above</h3>
+	
+	<form action ="RemoveTax" method = "post"> 
+	
+	<input type = "submit" value = "Reset Tax Table">
+	</form>
+	
+	</div>
+</body>
+
+</html>

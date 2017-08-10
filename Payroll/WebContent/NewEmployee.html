@@ -1,0 +1,146 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset = "UTF-8"> 
+<link rel = "stylesheet" type = "text/css" href = "main.css">
+<link rel = "stylesheet" type = "text/css" href = "sidebar.css">
+<title>Create New Employee Account</title>
+<style>
+table { border-collapse: collapse; width: 50%; } th, td { text-align: left; padding: 8px; } tr:nth-child(even){background-color: #f2f2f2}
+tr:hover {background-color: #e2f4ff;}
+</style>
+</head>
+
+<body>
+<ul>
+
+<li><a  href="PersonalInfoOutput">View Personal Information</a></li>
+<li><a  href="ViewEmployeeExpenseClaim">View Expense Claims</a></li>
+<li><a  href="PayslipAdmin">View Payslips</a></li>
+<li><a  href="changePassAdmin.html" >Change Password</a></li>
+<li><a  href="manageEmployee.html"class=active>Maintain Employee Information</a></li>
+<li><a  href="TaxInfo.html">Maintain Tax Information</a></li>
+<li><a  href="Payrollitems.html">Maintain Payroll Items</a></li>
+<li><a  href="TimeSheet.html">Maintain Timesheet</a></li>
+<li><a  href="EmployeeExpense.html">Maintain Expenses</a></li>
+<li><a  href="PayrollRun">Run Payroll</a></li>
+<li><a  href="GenerateReports">Generate Reports</a></li>
+
+</ul>
+<form align="right" name="form1" method="post" action="index.html">
+  <label>
+  <input name="submit2" type="submit" id="submit2" value="Logout">
+  </label>
+</form>
+<div style=margin-left:25%;padding:1px;>
+</div>
+
+<div id="container">
+<h1>Create New Employee Account</h1>
+<form action ="NewEmployeeAccount" method = "post"> 
+	
+	<table border ="1">	
+	
+	<tr>
+	<td>4 digit Employee ID:</td>
+	<td><input type = "text" name = "employee_id"  pattern="[0-9]{4}" title="4 digit number: e.g. 1234" maxlength="4" required></td>
+	</tr>
+	
+	<tr>
+	<td>First Name</td>
+	<td><input type = "text" name = "firstName"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Last Name</td>
+	<td><input type = "text" name = "lastName"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Admin</td>
+	<td><input type = "radio" name = "admin" value ="1"  required>Yes
+	<input type = "radio" name = "admin" value = "0"  required>No
+	</td>
+	</tr>
+	
+	<tr>
+	<td>Default Password: temp (To be changed by employee after login)</td>
+	<td><input type = "text" name = "password" value="temp" readonly></td>
+	</tr>
+	
+	<tr>
+	<td>Date of Birth</td>
+	<td><input type = "date" name = "DOB"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Residential Address</td>
+	<td><input type = "text" name = "address"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Email</td>
+	<td><input type = "email" name = "email"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Hourly Pay Rate ($)</td>
+	<td><input type = "number" name = "HPR" min="0" step="0.01"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Gender</td>
+	<td><input type = "radio" name = "gender" value="Male"  required>Male
+	<input type = "radio" name = "gender" value="Female" required>Female
+	</td>
+	</tr>
+	
+	<tr>
+	<td>Annual Leave Balance</td>
+	<td><input type = "number" name = "ALB" min="0" step="1"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Sick Leave Balance</td>
+	<td><input type = "number" name = "SLB" min="0" step="1"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Role</td>
+	<td><input type = "text" name = "Role"  required></td>
+	</tr>
+	
+	<tr>
+	<td>BSB Number</td>
+	<td><input type = "text" name = "BSB"  pattern="[0-9]{6}" title="6-digit BSB number e.g. 123456" maxlength="6" required></td>
+	</tr>
+	
+	<tr>
+	<td>Bank Name</td>
+	<td><input type = "text" name = "BankName"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Bank Account Number</td>
+	<td><input type = "text" name = "BAN"  pattern="[0-9]{12}" title="Please enter a valid Bank Account Number" maxlength="12" required></td>
+	</tr>
+	
+	<tr>
+	<td>Superannuation Company</td>
+	<td><input type = "text" name = "SAC"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Superannuation Number</td>
+	<td><input type = "text" name = "SAN"  required></td>
+	</tr>
+	
+	</table>
+	<br>
+	<br>
+	<input type = "submit" value = "Create Employee Account">
+	</form>.
+	</div>
+</body>
+
+</html>

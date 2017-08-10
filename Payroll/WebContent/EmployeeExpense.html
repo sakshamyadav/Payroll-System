@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset = "UTF-8"> 
+<link rel = "stylesheet" type = "text/css" href = "main.css">
+<link rel = "stylesheet" type = "text/css" href = "sidebar.css">
+<title>Employee Expenses</title>
+<style>
+table { border-collapse: collapse; width: 50%; } th, td { text-align: left; padding: 8px; } tr:nth-child(even){background-color: #f2f2f2}
+tr:hover {background-color: #e2f4ff;}
+</style>
+</head>
+
+<body>
+
+<ul>
+
+<li><a  href="PersonalInfoOutput">View Personal Information</a></li>
+<li><a  href="ViewEmployeeExpenseClaim">View Expense Claims</a></li>
+<li><a  href="PayslipAdmin">View Payslips</a></li>
+<li><a  href="changePassAdmin.html">Change Password</a></li>
+<li><a  href="manageEmployee.html">Maintain Employee Information</a></li>
+<li><a  href="TaxInfo.html">Maintain Tax Information</a></li>
+<li><a  href="Payrollitems.html">Maintain Payroll Items</a></li>
+<li><a  href="TimeSheet.html">Maintain Timesheet</a></li>
+<li><a  class=active>Maintain Expenses</a></li>
+<li><a  href="PayrollRun">Run Payroll</a></li>
+<li><a  href="GenerateReports">Generate Reports</a></li>
+
+</ul>
+<form align="right" name="form1" method="post" action="index.html">
+  <label>
+  <input name="submit2" type="submit" id="submit2" value="Logout">
+  </label>
+</form>
+
+
+<div style=margin-left:25%;padding:1px;>
+</div>
+
+<div id="container">
+	<h1>Maintain Expenses</h1>
+	
+	<form action ="Expenses" method = "post"> 
+	
+	<table border ="1">	
+	
+
+	<tr>
+	<td>Description of Expenses: </td>
+	<td>
+	
+<select id="expense_id" name="expense_id"  required>
+    <option disabled selected value> ---Select--- </option>
+    <option value=1>Accommodation</option>
+    <option value=2>Travel</option>
+    <option value=3>Meal Allowances</option>
+    <option value=4>Flat Rate Expenses</option>
+    <option value=5>Other</option>
+</select>
+
+</td>
+	</tr>
+	
+	<tr>
+	<td>Date when expense was incurred: </td>
+	<td><input type = "date" name = "date"  required></td>
+	</tr>
+	
+	<tr>
+	<td>Expenses Incurred ($)</td>
+	<td><input type = "number" name = "expense" min="0" step="0.01"  required></td>
+	</tr>
+
+	
+	</table>
+	<br>
+	<br>
+	<input type = "submit" value = "Submit">
+	</form>
+	</div>
+</body>
+
+</html>

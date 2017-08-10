@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset = "UTF-8"> 
+<link rel = "stylesheet" type = "text/css" href = "main.css">
+<link rel = "stylesheet" type = "text/css" href = "sidebar.css">
+<title>Update Employee Information</title>
+<style>
+table { border-collapse: collapse; width: 50%; } th, td { text-align: left; padding: 8px; } tr:nth-child(even){background-color: #f2f2f2}
+tr:hover {background-color: #e2f4ff;}
+</style>
+</head>
+
+<body>
+
+<ul>
+<li><a  href="PersonalInfoOutput">View Personal Information</a></li>
+<li><a  href="ViewEmployeeExpenseClaim">View Expense Claims</a></li>
+<li><a  href="PayslipAdmin">View Payslips</a></li>
+<li><a  href="changePassAdmin.html" >Change Password</a></li>
+<li><a  href ="manageEmployee.html" class=active>Maintain Employee Information</a></li>
+<li><a  href="TaxInfo.html">Maintain Tax Information</a></li>
+<li><a  href="Payrollitems.html">Maintain Payroll Items</a></li>
+<li><a  href="TimeSheet.html">Maintain Timesheet</a></li>
+<li><a  href="EmployeeExpense.html">Maintain Expenses</a></li>
+<li><a  href="PayrollRun">Run Payroll</a></li>
+<li><a  href="GenerateReports">Generate Reports</a></li>
+
+</ul>
+
+<div style=margin-left:25%;padding:1px;>
+</div>
+<form align="right" name="form1" method="post" action="index.html">
+  <label>
+  <input name="submit2" type="submit" id="submit2" value="Logout">
+  </label>
+</form>
+<div id="container">
+<h1>View Employee Information</h1>
+<form action ="ViewEmployeeInfo" method = "post"> 
+	
+	<table border ="1">	
+	
+	<tr>
+	<td>Employee ID Search:</td>
+	<td><input type = "search" name = "employee_id"  pattern="[0-9]{4}" title="4 digit number: e.g. 1234" maxlength="4" required>	<input type ="submit" value="Search"> 
+	</td>
+	</tr>
+	</table>
+	</form>
+	</div>
+	</body>
+	</html>
+	
